@@ -1,0 +1,65 @@
+- [parallel approach in AI compiler] [Concerto: Automatic Communication Optimization and Scheduling for Large-Scale Deep Learning](https://dl.acm.org/doi/pdf/10.1145/3669940.3707223). Cheng Shenggan, Lin Shengjie, Diao Lansong, Wu Hao, Wang Siyu, Si Chang, Liu Ziming, Zhao Xuanlei, Du Jiangsu, Lin Wei, You Yang. ASPLOS'25
+
+- [Serverless DL Serving] [Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity](https://dl.acm.org/doi/pdf/10.1145/3669940.3707251). Lv Cunchi, Shi Xiao, Lei Zhengyu, Huang Jinyue, Tan Wenting, Zheng Xiaohui, Zhao Xiaofang. ASPLOS'25
+
+- [npu hybrid inference] [Fast On-device LLM Inference with NPUs](https://dl.acm.org/doi/pdf/10.1145/3669940.3707239). Xu Daliang, Zhang Hao, Yang Liming, Liu Ruiqi, Huang Gang, Xu Mengwei, Liu Xuanzhe. ASPLOS'25
+
+- [performance prediction] [Forecasting GPU Performance for Deep Learning Training and Inference](https://dl.acm.org/doi/pdf/10.1145/3669940.3707265). Lee Seonho, Phanishayee Amar, Mahajan Divya. ASPLOS'25
+
+- [embedding model training] [Efficient and Economic Embedding Model Training with Commodity GPUs](https://dl.acm.org/doi/pdf/10.1145/3669940.3707245). Xie Minhui, Zeng Shaoxun, Guo Hao, Gao Shiwei, Lu Youyou. ASPLOS'25
+
+- [moe training] [FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models](https://dl.acm.org/doi/pdf/10.1145/3669940.3707272). Pan Xinglin, Lin Wenxiang, Zhang Lin, Shi Shaohuai, Tang Zhenheng, Wang Rui, Li Bo, Chu Xiaowen. ASPLOS'25
+
+- [DNN Training, Graph Pipeline Parallelism] [Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism](https://dl.acm.org/doi/pdf/10.1145/3669940.3707220). Jeon Byungsoo, Wu Mengdi, Cao Shiyi, Kim Sunghyun, Park Sunghyun, Aggarwal Neeraj, Unger Colin, Arfeen Daiyaan, Liao Peiyuan, Miao Xupeng, Alizadeh Mohammad, Ganger Gregory R., Chen Tianqi, Jia Zhihao. ASPLOS'25
+
+- [DNN serving, Heterogeneous GPUs and Network] [Helix: Serving Large Language Models over Heterogeneous GPUs and Network via Max-Flow](https://dl.acm.org/doi/pdf/10.1145/3669940.3707215). Mei Yixuan, Zhuang Yonghao, Miao Xupeng, Yang Juncheng, Jia Zhihao, Vinayak Rashmi. ASPLOS'25
+
+- [Serverless DL Serving] [Medusa: Accelerating Serverless LLM Inference with Materialization](https://dl.acm.org/doi/pdf/10.1145/3669940.3707285). Zeng Shaoxun, Xie Minhui, Gao Shiwei, Chen Youmin, Lu Youyou. ASPLOS'25
+
+- [MoE Inference, on-device] [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](https://dl.acm.org/doi/pdf/10.1145/3669940.3707267). Cao Shiyi, Liu Shu, Griggs Tyler, Schafhalter Peter, Liu Xiaoxuan, Sheng Ying, Gonzalez Joseph E., Zaharia Matei, Stoica Ion. ASPLOS'25
+
+- [DNN Compression] [MVQ: Towards Efficient DNN Compression and Acceleration with Masked Vector Quantization](https://dl.acm.org/doi/pdf/10.1145/3669940.3707268). Li Shuaiting, Wang Chengxuan, Deng Juncan, Wang Zeyu, Ye Zewen, Wang Zongsheng, Shen Haibin, Huang Kejie. ASPLOS'25
+
+- [parallel checkpoint saving, DNN training] [PCcheck: Persistent Concurrent Checkpointing for ML](https://dl.acm.org/doi/pdf/10.1145/3669940.3707255). Strati Foteini, Friedman Michal, Klimovic Ana. ASPLOS'25
+
+- [Confidential computing LLM] [PipeLLM: Fast and Confidential Large Language Model Services with Speculative Pipelined Encryption](https://dl.acm.org/doi/pdf/10.1145/3669940.3707224). Tan Yifan, Tan Cheng, Mi Zeyu, Chen Haibo. ASPLOS'25
+
+- [kv-cache Management] [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](https://dl.acm.org/doi/pdf/10.1145/3669940.3707256). Prabhu Ramya, Nayak Ajay, Mohan Jayashree, Ramjee Ramachandran, Panwar Ashish. ASPLOS'25
+
+- [Energy Efficiency] [Using Analytical Performance/Power Model and Fine-Grained DVFS to Enhance AI Accelerator Energy Efficiency](https://dl.acm.org/doi/pdf/10.1145/3669940.3707231). Wang Zibo, Zhang Yijia, Wei Fuchun, Wang Bingqiang, Liu Yanlin, Hu Zhiheng, Zhang Jingyi, Xu Xiaoxin, He Jian, Wang Xiaoliang, Dou Wanchun, Chen Guihai, Tian Chen. ASPLOS'25
+
+- [multi-level KV cache, LLM Serving, Multi-turn Dialogues] [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](https://dl.acm.org/doi/pdf/10.1145/3676641.3716245). Jeong Jinwoo, Ahn Jeongseob. ASPLOS'25
+
+~- [LLM serving, preemptive scheduling] [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](https://dl.acm.org/doi/pdf/10.1145/3676641.3715983). Vijaya Kumar Abhishek, Antichi Gianni, Singh Rachee. ASPLOS'25~
+
+- [Collaboration-of-Experts, llm serving] [CoServe: Efficient Collaboration-of-Experts (CoE) Model Inference with Limited Memory](https://dl.acm.org/doi/pdf/10.1145/3676641.3715986). Suo Jiashun, Liao Xiaojian, Xiao Limin, Ruan Li, Wang Jinquan, Su Xiao, Huo Zhisheng. ASPLOS'25
+
+- [LLM Serving, Quantization] [COMET: Towards Practical W4A4KV4 LLMs Serving](https://dl.acm.org/doi/pdf/10.1145/3676641.3716252). Liu Lian, Cheng Long, Ren Haimeng, Xu Zhaohui, Pan Yudong, Wang Mengdi, Li Xiaowei, Han Yinhe, Wang Ying. ASPLOS'25
+
+- [Sparse Attention, long-sequence] [DynaX: Sparse Attention Acceleration with Dynamic X:M Fine-Grained Structured Pruning](https://dl.acm.org/doi/pdf/10.1145/3676641.3715991). Xiong Xiao, Chen Zhaorui, Liang Yue, Tian Minghao, Shang Jiaxing, Zhong Jiang, Liu Dajiang. ASPLOS'25
+
+- [LLM Training, sequence parallelism] [FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism](https://dl.acm.org/doi/pdf/10.1145/3676641.3715998). Wang Yujie, Wang Shiju, Zhu Shenhan, Fu Fangcheng, Liu Xinyi, Xiao Xuefeng, Li Huixia, Li Jiashi, Wu Faming, Cui Bin. ASPLOS'25
+
+- [MOE Inference, Multi-Batch Pipeline] [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](https://dl.acm.org/doi/pdf/10.1145/3676641.3716261). Fang Zhiyuan, Huang Yuegui, Hong Zicong, Lyu Yufeng, Chen Wuhui, Yu Yue, Yu Fan, Zheng Zibin. ASPLOS'25
+
+- [MoE training] [MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training](https://dl.acm.org/doi/pdf/10.1145/3676641.3716006). Cai Weilin, Qin Le, Huang Jiayi. ASPLOS'25
+
+- [LLM serving, PIM] [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](https://dl.acm.org/doi/pdf/10.1145/3676641.3716009). He Yintao, Mao Haiyu, Giannoula Christina, Sadrosadati Mohammad, Gómez-Luna Juan, Li Huawei, Li Xiaowei, Wang Ying, Mutlu Onur. ASPLOS'25
+
+- [DNN serving, deep learning recommendation model] [Load and MLP-Aware Thread Orchestration for Recommendation Systems Inference on CPUs](https://dl.acm.org/doi/pdf/10.1145/3676641.3716003). Jain Rishabh, Chou Teyuh, Kayiran Onur, Kalamatianos John, Loh Gabriel H., Kandemir Mahmut T., Das Chita R.. ASPLOS'25
+
+- [LLM serving, Operations optimization, AI compiler] [PICACHU: Plug-In CGRA Handling Upcoming Nonlinear Operations in LLMs](https://dl.acm.org/doi/pdf/10.1145/3676641.3716013). Qin Jiajun, Xia Tianhua, Tan Cheng, Zhang Jeff, Zhang Sai Qian. ASPLOS'25
+
+- [LLM inference, GPU kernel, hybrid batching] [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](https://dl.acm.org/doi/pdf/10.1145/3676641.3715996). Kamath Aditya K., Prabhu Ramya, Mohan Jayashree, Peter Simon, Ramjee Ramachandran, Panwar Ashish. ASPLOS'25
+
+- [LLM training, cloud-native system, data center] [Vela: A Virtualized LLM Training System with GPU Direct RoCE](https://dl.acm.org/doi/pdf/10.1145/3676641.3716280). Mohan Apoorve, Walkup Robert, Karacali Bengi, Chen Ming-hung, Kayi Abdullah, Schour Liran, Salaria Shweta, Wen Sophia, Chung I-hsin, Alim Abdul, Evangelinos Constantinos, Luo Lixiang, Dombrowa Marc, Schares Laurent, Sydney Ali, Maniotis Pavlos, Koteshwara Sandhya, Tang Brent, Belog Joel, Odaira Rei, Tarasov Vasily, Gampel Eran, Thorstensen Drew, Gershon Talia, Seelam Seetharami. ASPLOS'25
+
+- [LLM serving, end-to-end optimization] [Towards End-to-End Optimization of LLM-based Applications with Ayo](https://dl.acm.org/doi/pdf/10.1145/3676641.3716278). Tan Xin, Jiang Yimin, Yang Yitao, Xu Hong. ASPLOS'25
+
+- [LLM Inference, data center, energy efficient] [TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms](https://dl.acm.org/doi/pdf/10.1145/3676641.3716025). Stojkovic Jovan, Zhang Chaojie, Goiri Íñigo, Choukse Esha, Qiu Haoran, Fonseca Rodrigo, Torrellas Josep, Bianchini Ricardo. ASPLOS'25
+
+- [LLM inference, PIM with CXL] [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](https://dl.acm.org/doi/pdf/10.1145/3676641.3716267). Gu Yufeng, Khadem Alireza, Umesh Sumanth, Liang Ning, Servot Xavier, Mutlu Onur, Iyer Ravi, Das Reetuparna. ASPLOS'25
+
+- [LLM serving, Scheduler] [Past-Future Scheduler for LLM Serving under SLA Guarantees](https://dl.acm.org/doi/pdf/10.1145/3676641.3716011). Gong Ruihao, Bai Shihao, Wu Siyu, Fan Yunqian, Wang Zaijun, Li Xiuhong, Yang Hailong, Liu Xianglong. ASPLOS'25
+
+- [DNN training, multi-modal, multi-task] [Spindle: Efficient Distributed Training of Multi-Task Large Models via Wavefront Scheduling](https://dl.acm.org/doi/pdf/10.1145/3676641.3715992). Wang Yujie, Zhu Shenhan, Fu Fangcheng, Miao Xupeng, Zhang Jie, Zhu Juan, Hong Fan, Li Yong, Cui Bin. ASPLOS'25
