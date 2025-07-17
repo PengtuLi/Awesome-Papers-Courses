@@ -1,21 +1,33 @@
 # Table of contents
 
-* [paper-reading](README.md)
+## Introduction
+
+* [Page 1](README.md)
+
+***
+
+* [Page](page.md)
+* [paper-reading](<README (1).md>)
 * [2025-reading](2025-reading.md)
 * [25-05-09-asplos25-paper](25-05-09-asplos25-paper.md)
 * [Interested Paper](interested-paper.md)
-* [Efficient\_Foundation\_Model\_Survey](efficient_foundation_model_survey/README.md)
-  * [Efficient LLM and Multimodal Foundation Model Survey](Efficient_Foundation_Model_Survey/index.md)
-* [ML Papers of The Week](ML-Papers-of-the-Week-main/README.md)
-  * [Table of contents](ML-Papers-of-the-Week-main/SUMMARY.md)
-  * [pics](ML-Papers-of-the-Week-main/pics/README.md)
-  * [Research](ML-Papers-of-the-Week-main/research/README.md)
-* [Systems for Foundation Models](Systems-for-Foundation-Models-main/README.md)
-* [深度学习论文精读](paper-reading-main/README.md)
 
-## Group 1
+## Reading Notes
 
-* [Page 1](group-1/page-1.md)
-* [Page 2](group-1/page-2/README.md)
-  * [Page](group-1/page-2/page.md)
-  * [Page 3](group-1/page-2/page-3.md)
+* [Agent](reading-notes/agent/README.md)
+  * [😃 agent 调研](reading-notes/agent/agent-diao-yan.md)
+
+## Paper List
+
+* [Page 2](paper-list/page-2.md)
+
+## Awesome Paper Repo
+
+* [Systems for Foundation Models](awesome-paper-repo/systems-for-foundation-models-main.md)
+* [ML Papers of The Week](awesome-paper-repo/ml-papers-of-the-week-main/README.md)
+  * [Table of contents](awesome-paper-repo/ml-papers-of-the-week-main/summary.md)
+  * [pics](awesome-paper-repo/ml-papers-of-the-week-main/pics.md)
+  * [Research](awesome-paper-repo/ml-papers-of-the-week-main/research.md)
+* [深度学习论文精读](awesome-paper-repo/paper-reading-main.md)
+* [Efficient\_Foundation\_Model\_Survey](awesome-paper-repo/efficient_foundation_model_survey/README.md)
+  * [Efficient LLM and Multimodal Foundation Model Survey](awesome-paper-repo/efficient_foundation_model_survey/index.md)

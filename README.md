@@ -1,3 +1,17 @@
-# paper-reading
+# Page 1
 
-[![](https://img.shields.io/static/v1?message=Documented%20on%20GitBook\&logo=gitbook\&logoColor=ffffff\&label=%20\&labelColor=5c5c5c\&color=3F89A1)](https://www.gitbook.com/preview?utm_source=gitbook_readme_badge\&utm_medium=organic\&utm_campaign=preview_documentation\&utm_content=link)
+## Introduction
+
+> “Think different.” —— Apple Inc.
+
+Hi all, thank you for visiting here ;-)
+
+### Changelogs
+
+* 07/2025: Create this repo.
+
+### License
+
+Released under the **MIT License**.
+
+Copyright © 2025 Patrick Li.
