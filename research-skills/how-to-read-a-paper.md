@@ -12,48 +12,43 @@ Author: Srinivasan Keshav (_University of Waterloo)_
 
 Give a general idea about the paper.
 
-* **`Five to ten minutes`**
-* Detailed steps
+- **`Five to ten minutes`**
+- Detailed steps
   1. Carefully read **the title, abstract and introduction**.
   2. Read **the section and sub-section headings**, but ignore everything else.
   3. Read **the conclusions**.
   4. Glance over **the references**, mentally ticking off the ones you’ve already read.
-* Answer five questions at the end (5c)
+- Answer five questions at the end (5c)
   1. **Category**: What type of paper is this? A measurement paper? An analysis of an existing system? A description of a research prototype?
   2. **Context**: Which other papers is it related to? Which theoretical bases were used to analyze the problem?
   3. **Correctness**: Do the assumption appear to be valid?
   4. **Contributions**: What are the paper's main contributions?
   5. **Clarity**: Is the paper well written?
-* Use the above information to decide whether read further.
+- Use the above information to decide whether read further.
 
 #### The second pass
 
 Grasp the paper's content, but not its details.
 
-* Take `up to an hour`**.**
-* Look carefully at the **figures, diagrams and other illustrations** in the paper.
-* Mark **relevant unread references** for further reading -> learn more about the background.
+- Take `up to an hour`**.**
+- Look carefully at the **figures, diagrams and other illustrations** in the paper.
+- Mark **relevant unread references** for further reading -> learn more about the background.
 
 #### The third pass
 
 Understand the paper in depth. (Mostly a reviewer)
 
-* `Four or five hours for beginners, about an hour for an experienced reader`.
-* Attempt to **virtually re-implement** the paper (from the author's view).
-* Identify its **strong and weak** points.
+- `Four or five hours for beginners, about an hour for an experienced reader`.
+- Attempt to **virtually re-implement** the paper (from the author's view).
+- Identify its **strong and weak** points.
 
 ### How to do a literature survey
 
 1. Use academic search engine to **find three to five recent papers** in this area, do **one pass** on each paper, then read their related work sections
 2. Find **shared citations and repeated author names** -> obtain key papers and researchers, the top conferences
 
-
-
-***
-
-<figure><img src="https://images.unsplash.com/photo-1648052845121-dec461c2f7d9?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MTEwODB8&#x26;ixlib=rb-4.1.0&#x26;q=85" alt=""><figcaption></figcaption></figure>
+---
 
 {% file src="../.gitbook/assets/Towards End-to-End Optimization of LLM-based Applications with Ayo.pdf" %}
 
 <img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
-
