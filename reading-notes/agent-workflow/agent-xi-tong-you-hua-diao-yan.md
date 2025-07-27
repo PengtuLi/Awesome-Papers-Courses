@@ -1,4 +1,4 @@
-# 😃 agent 调研
+# 😃 Agent 系统优化调研
 
 
 
@@ -143,3 +143,52 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 
 * CUHK
 
+
+
+> Towards Efficient Compound Large Language Model System Serving in the Wild. IWQoS'2024
+
+* SJTU
+* poster
+* 目标：优化端到端延时
+
+Challenge：DAG的不确定性->topology;exec duration;
+
+motivation：“信息的生成（llm planer）”本身就是一个关键的、需要被优先保障的计算过程 。生成DAG方便调度后续步骤，提高资源利用率。
+
+Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sensing)，不同类型的APP的不确定性不一样，优先调度不确定性最高的
+
+> Circinus: Efficient Query Planner for Compound ML Serving. ArXiv:2504
+
+
+
+> Efficient Serving of LLM Applications with Probabilistic Demand Modeling
+
+
+
+> LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications
+
+
+
+
+
+> Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents. ICML 2025 Workshop on MAS
+
+
+
+
+
+> Towards Resource-Efficient Compound AI Systems
+
+* MIT & Azure Research
+
+
+
+### Idea
+
+8卡机之间nvlink共享显存，不同组件之间充分利用能力
+
+multi-agent
+
+Graph Neural Network Inference.能不能联系起来
+
+GPU 拆分？
