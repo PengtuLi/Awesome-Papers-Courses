@@ -1,6 +1,14 @@
 # 😃 Agent 系统优化调研
 
+### Cataglories
 
+* multi-agent
+  * Magentic-one: A generalist multi-agent system for solving complex tasks, 2024.
+  * Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents, 2025.
+
+
+
+### papers
 
 > Tempo: Application-aware LLM Serving with Mixed SLO Requirements
 
@@ -192,3 +200,5 @@ multi-agent
 Graph Neural Network Inference.能不能联系起来
 
 GPU 拆分？
+
+multiplexing?

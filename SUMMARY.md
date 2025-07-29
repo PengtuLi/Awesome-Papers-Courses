@@ -25,3 +25,8 @@
 ## Research Skills
 
 * [How to Read a Paper](research-skills/how-to-read-a-paper.md)
+
+## Courses
+
+* [CS336](courses/cs336/README.md)
+  * [C1-i](courses/cs336/c1-i.md)
