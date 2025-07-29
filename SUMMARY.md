@@ -2,7 +2,7 @@
 
 ## Introduction
 
-* [intro](README.md)
+* [Intro](README.md)
 
 ## Reading Notes
 
@@ -13,7 +13,8 @@
 
 ## Paper List
 
-* [25-05-09-asplos25-paper](paper-list/25-05-09-asplos25-paper.md)
+* [2025](paper-list/2025/README.md)
+  * [ASPLOS25](paper-list/2025/asplos25.md)
 
 ## Awesome Paper Repo
 
