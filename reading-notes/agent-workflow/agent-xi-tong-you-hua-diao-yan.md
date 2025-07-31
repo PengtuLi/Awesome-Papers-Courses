@@ -2,11 +2,13 @@
 
 ### Cataglories
 
-* multi-agent
+* multi-agent workflow design
   * Magentic-one: A generalist multi-agent system for solving complex tasks, 2024.
   * Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents, 2025.
-
-
+  * PEER: Expertizing Domain-Specific Tasks with a Multi-Agent Framework and Tuning Methods, 2024.
+* agent cache optimization
+  * agent prefix kv-cache cache, llm prefill latency
+    * KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
 
 ### papers
 
@@ -191,6 +193,27 @@ Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sen
 
 
 
+> KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
+
+* UCSD & AWS
+* not open source
+* keyword: multi-agent serve, prefix kv cache, <mark style="color:red;">optim prefill latency</mark>
+* backgroud
+  * agent kv cache(_**tree-based**_)，fixed part(large, agent’s role, behavioral instructions, task description, and few-shot learning examples) +task-specific dynamic part(user inpput, small)， what we cache? _**KV of the fixed parts**_
+  * different user lead to different fiexed part for the same agent, eg 2 executor instruct
+  * LRU not fits agentic workflow, can not capture workflow info, leads to cache miss
+* prefix cache management for agentic workflows
+  * a workflow-aware eviction policy
+    * DAG无法描述multi agent中的分支关系，是AND还是OR，无法准确计算该node计算是在后面几个位置，从而kv cache的优先级无法确认
+    * 提出Agent Step Graph abstraction，**agent invocation as node level.** agents with larger steps-to-execution are more likely to be evicted.
+  * overlapped KV prefetching mechanism
+    * proactivate offload kvcache, like infinigen
+* brainstrom
+  * only optim llm prefill latency. useful for long sequence, but as the number of output tokens increases, the relative gain from KVFlow diminishes.
+  * not consider tool call time, which may be the critical path
+
+
+
 ### Idea
 
 8卡机之间nvlink共享显存，不同组件之间充分利用能力
@@ -202,3 +225,5 @@ Graph Neural Network Inference.能不能联系起来
 GPU 拆分？
 
 multiplexing?
+
+muti agent kv-cache + aqua

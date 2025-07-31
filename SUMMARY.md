@@ -31,8 +31,8 @@
 
 * [Machine Learning](courses/machine-learning/README.md)
   * [CMU11868: Large Language Model Systems](courses/machine-learning/cmu11868-large-language-model-systems.md)
-  * [CS336: Language Modeling from Scratch](courses/machine-learning/cs336-language-modeling-from-scratch/README.md)
-    * [C1-i](courses/machine-learning/cs336-language-modeling-from-scratch/c1-i.md)
+  * [CS336: Language Modeling from Scratch](courses/cs336/README.md)
+    * [C1-i](courses/cs336/c1-i.md)
   * [李宏毅: 机器学习](courses/machine-learning/li-hong-yi-ji-qi-xue-xi.md)
 
 ## Leetcode

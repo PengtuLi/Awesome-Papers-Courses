@@ -39,8 +39,8 @@ Grasp the paper's content, but not its details.
 Understand the paper in depth. (Mostly a reviewer)
 
 * `Four or five hours for beginners, about an hour for an experienced reader`.
-* Attempt to **virtually re-implement** the paper (from the author's view).
-* Identify its **strong and weak** points.
+* Attempt to <mark style="color:red;">**virtually re-implement**</mark> the paper (from the author's view).
+* <mark style="color:red;">**Identify its strong and weak points.**</mark>
 
 ### How to do a literature survey
 
