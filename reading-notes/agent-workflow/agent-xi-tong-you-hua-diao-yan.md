@@ -3,12 +3,24 @@
 ### Cataglories
 
 * multi-agent workflow design
-  * Magentic-one: A generalist multi-agent system for solving complex tasks, 2024.
-  * Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents, 2025.
-  * PEER: Expertizing Domain-Specific Tasks with a Multi-Agent Framework and Tuning Methods, 2024.
-* agent cache optimization
-  * agent prefix kv-cache cache, llm prefill latency
+  * Magentic-one: A generalist multi-agent system for solving complex tasks. 2024.
+  * Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents. 2025.
+  * PEER: Expertizing Domain-Specific Tasks with a Multi-Agent Framework and Tuning Methods. 2024.
+  * Very Large-Scale Multi-Agent Simulation in AgentScope. arXiv:2407
+* RAG optimization (specific)
+  * llm prefill latency
+    * RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation. arXiv:2404
+      * rag prefix kv-cache
+* Compound AI optimization
+  * framework design
+    * Towards Resource-Efficient Compound AI Systems. HOTOS 25
+      * AIWaas design, Workflow-Aware Cluster Management.
+  * e2e latency
+    * Towards Efficient Compound Large Language Model System Serving in the Wild. IWQoS'2024
+      * DAG is uncertain, including dependency and exec time; priority schedule most uncertain request to parallel consequential stage;
+  * llm prefill latency
     * KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
+      * agent prefix kv-cache cache
 
 ### papers
 
@@ -159,13 +171,10 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 
 * SJTU
 * poster
-* 目标：优化端到端延时
-
-Challenge：DAG的不确定性->topology;exec duration;
-
-motivation：“信息的生成（llm planer）”本身就是一个关键的、需要被优先保障的计算过程 。生成DAG方便调度后续步骤，提高资源利用率。
-
-Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sensing)，不同类型的APP的不确定性不一样，优先调度不确定性最高的
+* optim e2e latency
+* Challenge：DAG的不确定性->topology;exec duration;
+* motivation：“信息的生成（llm planer）”本身就是一个关键的、需要被优先保障的计算过程 。优先生成DAG方便调度后续步骤，提高资源利用率。
+* Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sensing)，不同类型的APP的不确定性不一样，优先调度不确定性最高的
 
 > Circinus: Efficient Query Planner for Compound ML Serving. ArXiv:2504
 
@@ -187,17 +196,21 @@ Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sen
 
 
 
-> Towards Resource-Efficient Compound AI Systems
+> Towards Resource-Efficient Compound AI Systems. HOTOS 25
 
 * MIT & Azure Research
-
-
+* not open source
+* keyword:&#x20;
+  * focus on resource utilization
+  * AI Workflows-as-a-Service (AIWaaS) design, similar to Faas. 选择最优模型、配置和调度GPU/CPU资源、控制成本、保证质量。
+  * **core: Workflow-Aware Cluster Management -> Cost/latency/quality/Energy...**
 
 > KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
 
 * UCSD & AWS
 * not open source
 * keyword: multi-agent serve, prefix kv cache, <mark style="color:red;">optim prefill latency</mark>
+* <mark style="color:red;">key insight: cache the agent fixed prefix prompt shared by requests and consider workflow info to reduce cache miss to reduce prefilll latency</mark>
 * backgroud
   * agent kv cache(_**tree-based**_)，fixed part(large, agent’s role, behavioral instructions, task description, and few-shot learning examples) +task-specific dynamic part(user inpput, small)， what we cache? _**KV of the fixed parts**_
   * different user lead to different fiexed part for the same agent, eg 2 executor instruct
@@ -210,9 +223,35 @@ Solution：**PS-TCS** (Priority-based Scheduling with Topological Complexity Sen
     * proactivate offload kvcache, like infinigen
 * brainstrom
   * only optim llm prefill latency. useful for long sequence, but as the number of output tokens increases, the relative gain from KVFlow diminishes.
-  * not consider tool call time, which may be the critical path
+  * **not consider tool call time**, which may be the critical path
 
+> RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation. arXiv:2404
 
+* PKU & ByteDance
+* not open-source
+* keyword: rag prefix cache, serving, multi-level cache system, <mark style="color:red;">optim prefill latency</mark>
+* <mark style="color:red;">key insight: cache the prefix kv-cache of the retrival</mark> <mark style="color:red;"></mark><mark style="color:red;">**hot**</mark> <mark style="color:red;"></mark><mark style="color:red;">doc to reduce prefill latency</mark>
+* background
+  * rag bottleneck lies in prefill step for long seq len rag
+  * recurrence of identical _**hot**_ documents across multiple requests
+* method
+  * Greedy-Dual-Size-Frequency (PGDSF) **replacement policy** to minimize cache miss
+    * tree based; cost aware;
+  * cache-aware request reordering
+    * priority queue; cached length / recompute length
+  * dynamic speculative pipelining.
+    * vector search may produce the final results early in the retrieval step
+    * overlap the retrieval and generation steps
+* brainstorm
+  * not consider different rag config, not all situation bottleneck lies in prefill
+  * 0.3M docs in vector database, top-1 or 2 selection, is a representive config?
+  * may be consider agent workflow info? powerinfer? on device?
+
+> HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation. ISCA ’25
+
+* HUST & NUS
+* not open-source
+* keywords: PIM based rag system; HBM-based PIM + DIMM-based PIM;
 
 ### Idea
 
@@ -224,6 +263,12 @@ Graph Neural Network Inference.能不能联系起来
 
 GPU 拆分？
 
-multiplexing?
+multiplexing? nvidia-green split in on device senario
 
 muti agent kv-cache + aqua
+
+serveless + agent ?
+
+could + edge workflow optim
+
+dynamic resource allocation and load balancing做这个？现在好像都是静态的
