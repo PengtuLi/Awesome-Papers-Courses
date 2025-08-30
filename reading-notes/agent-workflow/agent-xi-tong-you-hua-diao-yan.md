@@ -15,9 +15,13 @@
   * framework design
     * Towards Resource-Efficient Compound AI Systems. HOTOS 25
       * AIWaas design, Workflow-Aware Cluster Management.
+  * SLO Goodput
+    *
   * e2e latency
     * Towards Efficient Compound Large Language Model System Serving in the Wild. IWQoS'2024
       * DAG is uncertain, including dependency and exec time; priority schedule most uncertain request to parallel consequential stage;
+    * LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications. arXiv:2504
+      * uncertainty aware schdule to minimize average JCT
   * llm prefill latency
     * KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
       * agent prefix kv-cache cache
@@ -170,7 +174,7 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 > Towards Efficient Compound Large Language Model System Serving in the Wild. IWQoS'2024
 
 * SJTU
-* poster
+* workshop
 * optim e2e latency
 * Challenge：DAG的不确定性->topology;exec duration;
 * motivation：“信息的生成（llm planer）”本身就是一个关键的、需要被优先保障的计算过程 。优先生成DAG方便调度后续步骤，提高资源利用率。
@@ -178,17 +182,56 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 
 > Circinus: Efficient Query Planner for Compound ML Serving. ArXiv:2504
 
+* UIUC
+* not open-source
+* keywords: slo aware edge-cloud schedule; agent serving; optim slo throughput;
+* brainstorm
+  * no edge? just device + cloud?
+  * no pipeline concurrency detail
 
+> Efficient Serving of LLM Applications with Probabilistic Demand Modeling. Arxiv:2506
 
-> Efficient Serving of LLM Applications with Probabilistic Demand Modeling
+* SJTU & HUAWEI CLOUD
+* not open-source
+* keywords: Probabilistic Demand Graph; LLM app serving; optimize e2e latency；
+* 问题：
+  * 队列调度效率低下，因为不知道任务的执行时间只能当做黑盒
+  * DAG动态性，后端容器预热延迟问题
+* insight：
+  * 模块    输入输出以及并行度的稳定性，高斯分布
+  * 仅仅利用离线测量的均值不够，输入输出与之前的组件有关
+* 核心思想：建模融合了后续组件调用概率的DAG图，优化请求调度顺序以及容器预热判断
+* method
+  * DAG建模
+* brainstorm：
+  * 端侧多模型切换的问题
+  * 组件利用频率的问题；预热
 
+> LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications. arXiv:2504
 
-
-> LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications
-
-
-
-
+* SJTU
+* not open-source
+* keywords: DAG scheduling; optimize e2e latency；
+* background
+  * schedule Challenge：DAG uncertainty->topology; node exec duration;&#x20;
+  * SFJ is useful to reduce ave latecy, but topology uncertainty makes wrong decision.
+  * compound type
+    * #### Predefined applications, fixed (rag)
+    * #### chain like (react, iteration)
+    * #### plan app (task-automation)
+  * #### key insight: scheduling stages that <mark style="color:red;">reduce uncertainty</mark>, we can obtain valuable information once they’re completed.
+  * #### design
+    * #### DAG define
+      * Regular Stage, llm stage, <mark style="color:red;">dynamic stage</mark>&#x20;
+    * #### BN-based Profiler
+      * #### offline, to identify stage reduces uncertainty
+      * motivation: heatmaps show relation between stages, leverage inter-stage correlations
+    * #### Entropy-based Uncertainty Quantification
+      * #### to calculate which stage to schedule first
+    * #### Uncertainty-aware Scheduler
+      * **ε-greedy to mix schedule of SRFT and uncertainty schedule**
+  * **brainstorm**
+    * **only consider schdule layer, lacks fine-grained batch policy**
 
 > Optimizing Sequential Multi-Step Tasks with Parallel LLM Agents. ICML 2025 Workshop on MAS
 
@@ -253,17 +296,21 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 * not open-source
 * keywords: PIM based rag system; HBM-based PIM + DIMM-based PIM;
 
+
+
+> Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC. arxiv:2506
+
+* PKU
+* not open-source
+* keywords: heterogeneous SoCs; PD disaggregate; on-device; core ultra with llama-3B;
+
 ### Idea
 
-8卡机之间nvlink共享显存，不同组件之间充分利用能力
+8卡机之间nvlink共享显存，不同组件之间充分利用能力, aqua like schudling，optim placement；Fair schedule；agent上下文迁移看看有什么能做的
 
 multi-agent
 
-Graph Neural Network Inference.能不能联系起来
-
-GPU 拆分？
-
-multiplexing? nvidia-green split in on device senario
+GPU 拆分？multiplexing? nvidia-green split in on device senario
 
 muti agent kv-cache + aqua
 
@@ -272,3 +319,4 @@ serveless + agent ?
 could + edge workflow optim
 
 dynamic resource allocation and load balancing做这个？现在好像都是静态的
+
