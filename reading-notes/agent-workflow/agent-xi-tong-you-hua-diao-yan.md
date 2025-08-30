@@ -22,6 +22,8 @@
       * DAG is uncertain, including dependency and exec time; priority schedule most uncertain request to parallel consequential stage;
     * LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications. arXiv:2504
       * uncertainty aware schdule to minimize average JCT
+    * Efficient Serving of LLM Applications with Probabilistic Demand Modeling. Arxiv:2506
+      * uncertainty modeling to better schdule and prewarm backend to minimize JCT
   * llm prefill latency
     * KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows. Arxiv:2507
       * agent prefix kv-cache cache
