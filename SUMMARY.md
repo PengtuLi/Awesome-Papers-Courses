@@ -35,6 +35,11 @@
     * [C1-i](courses/cs336/c1-i.md)
   * [李宏毅: 机器学习](courses/machine-learning/li-hong-yi-ji-qi-xue-xi.md)
 
+***
+
+* [Interest field](interest-field/README.md)
+  * [Positive Phychology（积极心理学）](interest-field/positive-phychology-ji-ji-xin-li-xue.md)
+
 ## Leetcode
 
 * [Page 1](leetcode/page-1.md)

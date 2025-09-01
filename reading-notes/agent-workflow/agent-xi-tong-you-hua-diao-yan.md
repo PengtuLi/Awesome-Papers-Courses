@@ -305,7 +305,10 @@ RAGO的工作流程是：首先，利用一个经过校准的性能分析模型�
 
 * PKU
 * not open-source
-* keywords: heterogeneous SoCs; PD disaggregate; on-device; core ultra with llama-3B;
+* keywords: heterogeneous SoCs; PD disaggregate; on-device; Intel Core Ultra with llama-3B;
+* background
+  * **端侧两种workload，一种被动，一种主动；reactive-latency， proactive-throughput**
+  * 端侧上资源争用；SOC特性（如NPU）与LLM不匹配
 
 ### Idea
 
